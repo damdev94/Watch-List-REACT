@@ -1,0 +1,13 @@
+.delete-button button {
+  border-radius: 5px;
+  padding: 0 10px;
+  background-color: #EE4E4E;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+}

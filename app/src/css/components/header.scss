@@ -1,0 +1,17 @@
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  background-image: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  h2 {
+    color: wheat;
+    font-size: 40px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+}
