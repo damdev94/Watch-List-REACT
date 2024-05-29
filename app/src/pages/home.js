@@ -17,7 +17,7 @@ function Home() {
   const modalRef = useRef(null)
 
   useEffect(() => {
-    axios.get("http://localhost:5000/lists")
+    axios.get("https://watch-list-api-361e159c2c5a.herokuapp.com/lists")
       .then(res => {
         setLists(res.data);
       })
@@ -32,7 +32,7 @@ function Home() {
 
 
   const handleDeleteList = (id) => {
-    axios.delete(`http://localhost:5000/lists/${id}`)
+    axios.delete(`https://watch-list-api-361e159c2c5a.herokuapp.com/lists/${id}`)
     .then(res => {
       console.log("The list has been deleted succefully !")
       setLists(prevLists => prevLists.filter(list => list._id !== id))

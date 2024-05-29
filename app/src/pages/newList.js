@@ -14,7 +14,7 @@ function NewList({handleModal, handleUpdateList}) {
     formData.append('name', listName)
     formData.append('image', file)
 
-    axios.post('http://localhost:5000/lists', formData, {
+    axios.post('https://watch-list-api-361e159c2c5a.herokuapp.com/lists', formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }

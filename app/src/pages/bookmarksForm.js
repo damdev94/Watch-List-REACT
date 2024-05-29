@@ -23,7 +23,7 @@ function BookmarksForm({handleModal, handleCreateBookmark,}) {
   }
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/lists/${id}/bookmarks/new`)
+    axios.get(`https://watch-list-api-361e159c2c5a.herokuapp.com/lists/${id}/bookmarks/new`)
     .then(res => {
       setMovies(res.data)
     })
@@ -39,7 +39,7 @@ function BookmarksForm({handleModal, handleCreateBookmark,}) {
       movieId: selectedMovie.value,
       listId: id
     }
-    axios.post(`http://localhost:5000/lists/${id}/bookmarks/new`, bookmarkData)
+    axios.post(`https://watch-list-api-361e159c2c5a.herokuapp.com/lists/${id}/bookmarks/new`, bookmarkData)
     .then(res => {
       console.log('Bookmark created:', res.data)
       handleModal()

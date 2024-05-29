@@ -19,7 +19,7 @@ function Show() {
   const modalRef = useRef(null)
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/lists/${id}`)
+    axios.get(`https://watch-list-api-361e159c2c5a.herokuapp.com/lists/${id}`)
       .then((res) => {
         console.log(res.data)
         setList(res.data.list)
@@ -54,7 +54,7 @@ function Show() {
   }
   const handleDeleteBookmark = (id) => {
     console.log("Deleting bookmark with ID:", id)
-    axios.delete(`http://localhost:5000/bookmarks/${id}`)
+    axios.delete(`https://watch-list-api-361e159c2c5a.herokuapp.com/bookmarks/${id}`)
       .then(() => {
         console.log("bookmark has been deleted successfully !")
         setDeletedBookmarkId(id)
@@ -66,7 +66,7 @@ function Show() {
 
   const displayMovies = () => (
     <div>
-      <Header title={list.name} image={`http://localhost:5000/public/images/${list.image}`} />
+      <Header title={list.name} image={`https://watch-list-api-361e159c2c5a.herokuapp.com/public/images/${list.image}`} />
       <div className="buttons">
         <div className="new-movie-button">
           <CreateButton

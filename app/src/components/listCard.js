@@ -10,7 +10,7 @@ function ListCard({id, image, name, handleDelete}) {
         <div
           key={id}
           className="ListCard-container"
-          style={{ backgroundImage: `url(http://localhost:5000/public/images/${image})` }}
+          style={{ backgroundImage: `url(https://watch-list-api-361e159c2c5a.herokuapp.com/public/images/${image})` }}
         >
           <div className="listCard-title">
             <p key={id}>{name}</p>
